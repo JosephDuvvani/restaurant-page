@@ -1,0 +1,16 @@
+#main-title {
+    background-image: url(./steam.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.food-image {
+    min-width: 12.5rem;
+    min-height: 12.5rem;
+    border: 2px solid purple;
+}
+
+.showcase-food {
+    gap: 1rem;
+}
