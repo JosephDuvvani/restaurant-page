@@ -16,3 +16,13 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.primary-btn-colors {
+    color: #fff;
+    background-color: #09572a;
+}
+
+.btn-border {
+    border-style: none;
+    border-radius: .3rem;
+}

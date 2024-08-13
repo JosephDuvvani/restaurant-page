@@ -1,12 +1,12 @@
 #main-title {
-    height: 755px;
+    height: 47rem;
     overflow-clip-margin: content-box; 
     overflow: clip;
     position: relative;
 }
 
 #main-title img{
-    min-width: 1845px;
+    min-width: 115rem;
     width: 100%;
 }
 
@@ -14,7 +14,7 @@
     position: absolute;
     top: 30%;
     right: 20%;
-    width: 300px;
+    width: 18.75rem;
 }
 
 .logo-container .logo-text {
@@ -26,12 +26,29 @@
     justify-self: end;
 }
 
+.mini-food-gallery {
+    grid-template-rows: repeat(2, min-content);
+    justify-items: center;
+    padding: 5rem 1.5rem 3rem;
+    gap: 3rem;
+}
+
 .food-image {
-    min-width: 12.5rem;
-    min-height: 12.5rem;
-    border: 2px solid purple;
+    width: 12.5rem;
+    height: 12.5rem;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
 .showcase-food {
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.food-img {
+    width: 100%;
+}
+
+.order-now-btn {
+    width: max-content;
+    padding: .7rem 1.5rem;
 }
