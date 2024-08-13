@@ -12,6 +12,21 @@ export default function () {
     mainImage.src = mainImagePath;
     mainImage.setAttribute('alt', 'Kitchen');
 
+    const logoContainer = document.createElement('div');
+    logoContainer.classList.add('logo-container', 'display-grid');
+
+    const logoSavory = document.createElement('div');
+    logoSavory.classList.add('savory-text', 'logo-text');
+    logoSavory.textContent = 'Savory';
+
+    const logoLocale = document.createElement('div');
+    logoLocale.classList.add('locale-text', 'logo-text');
+    logoLocale.textContent = 'Locale';
+
+    logoContainer.appendChild(logoSavory);
+    logoContainer.appendChild(logoLocale);
+
+    mainTitle.appendChild(logoContainer);
     mainTitle.appendChild(mainImage);
     contentDiv.appendChild(mainTitle);
 

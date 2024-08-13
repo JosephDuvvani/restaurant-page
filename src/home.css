@@ -2,11 +2,28 @@
     height: 755px;
     overflow-clip-margin: content-box; 
     overflow: clip;
+    position: relative;
 }
 
 #main-title img{
     min-width: 1845px;
     width: 100%;
+}
+
+#main-title .logo-container {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    width: 300px;
+}
+
+.logo-container .logo-text {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.logo-container .locale-text {
+    justify-self: end;
 }
 
 .food-image {
