@@ -1,8 +1,12 @@
 #main-title {
-    background-image: url(./steam.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    height: 755px;
+    overflow-clip-margin: content-box; 
+    overflow: clip;
+}
+
+#main-title img{
+    min-width: 1845px;
+    width: 100%;
 }
 
 .food-image {
