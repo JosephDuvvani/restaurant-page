@@ -8,6 +8,8 @@ import './home.css';
 
 export default function () {
     const contentDiv = document.querySelector('#content');
+
+// Homepage main image and logo
     const mainTitle = document.createElement('div');
     mainTitle.setAttribute('id', 'main-title');
     mainTitle.classList.add('display-grid', 'center-items');
@@ -34,6 +36,7 @@ export default function () {
     mainTitle.appendChild(mainImage);
     contentDiv.appendChild(mainTitle);
 
+// Food Image mini Gallery
     const foodGallery = document.createElement('div');
     foodGallery.classList.add('mini-food-gallery', 'display-grid');
 
@@ -58,6 +61,7 @@ export default function () {
         showcaseFood.appendChild(foodImage);
     }
 
+// Create 'ORDER NOW' Button
     const orderNowBtn = document.createElement('button');
     orderNowBtn.classList.add('order-now-btn', 'primary-btn-colors', 'btn-border');
     orderNowBtn.setAttribute('type', 'button');
@@ -66,4 +70,188 @@ export default function () {
     foodGallery.appendChild(showcaseFood);
     foodGallery.appendChild(orderNowBtn);
     contentDiv.appendChild(foodGallery);
+
+// Info Section
+    const infoSection = document.createElement('div');
+    infoSection.classList.add('info-section');
+
+    // About Info
+    const aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('about-container', 'display-grid');
+
+    const aboutInfo = document.createElement('div')
+    aboutInfo.classList.add('about-info', 'display-grid', 'grid-horizontal-center');
+
+    const aboutHeading = document.createElement('h3')
+    aboutHeading.classList.add('about-heading');
+    aboutHeading.textContent =  'ABOUT';
+    aboutInfo.appendChild(aboutHeading);
+
+    const aboutSubHeading = document.createElement('h3')
+    aboutSubHeading.classList.add('about-sub-heading');
+    aboutSubHeading.textContent =  'our restaurant';
+    aboutInfo.appendChild(aboutSubHeading);
+
+    const aboutUnderline = document.createElement('div')
+    aboutUnderline.classList.add('info-underline');
+    aboutInfo.appendChild(aboutUnderline);
+
+    const hoursOpen = document.createElement('div')
+    hoursOpen.classList.add('hours-open');
+    hoursOpen.textContent =  'HOURS';
+    aboutInfo.appendChild(hoursOpen);
+
+    const openHoursDiv = document.createElement('div');
+    openHoursDiv.classList.add('open-hours', 'display-grid');
+
+    const days = [
+        'Monday - ',
+        'Tuesday - ',
+        'Wednesday - ',
+        'Thursday - ',
+        'Friday - ',
+        'Saturday - ',
+        'Sunday - '
+    ];
+
+    const hours = [
+        '12pm-9pm',
+        '12pm-9pm',
+        '12pm-10pm',
+        '12pm-10pm',
+        '12pm-10pm',
+        '12pm-10pm',
+        '12pm-10pm'
+    ];
+
+    for(let i = 0; i < days.length; i++) {
+        const day = document.createElement('span');
+        const time = document.createElement('span');
+
+        day.textContent = days[i];
+        time.textContent = hours[i];
+
+        openHoursDiv.appendChild(day);
+        openHoursDiv.appendChild(time);
+    }
+
+    aboutInfo.appendChild(openHoursDiv);
+
+    const phoneNumbers = document.createElement('div')
+    phoneNumbers.classList.add('phone-numbers');
+    phoneNumbers.textContent =  'PHONE';
+    aboutInfo.appendChild(phoneNumbers);
+
+    const phoneNumberOne = document.createElement('div')
+    phoneNumberOne.classList.add('phone-number');
+    phoneNumberOne.textContent =  '212.260.1212';
+    aboutInfo.appendChild(phoneNumberOne);
+
+    const phoneNumberTwo = document.createElement('div')
+    phoneNumberTwo.classList.add('phone-number');
+    phoneNumberTwo.textContent =  '212.260.7049';
+    aboutInfo.appendChild(phoneNumberTwo);
+
+    const aboutBtn = document.createElement('button');
+    aboutBtn.classList.add('about-btn', 'info-btn', 'primary-btn-colors', 'btn-border');
+    aboutBtn.setAttribute('type', 'button');
+    aboutBtn.textContent = 'ABOUT US';
+    aboutInfo.appendChild(aboutBtn);
+
+    const emptyAboutDiv = document.createElement('div');
+    emptyAboutDiv.classList.add('empty-div');
+
+    aboutContainer.appendChild(emptyAboutDiv);
+    aboutContainer.appendChild(aboutInfo);
+    infoSection.appendChild(aboutContainer);
+
+    // Order Info
+    const orderContainer = document.createElement('div');
+    orderContainer.classList.add('order-container', 'display-grid');
+
+    const orderInfo = document.createElement('div')
+    orderInfo.classList.add('order-info', 'display-grid','center-text', 'grid-horizontal-center');
+
+    const orderHeading = document.createElement('h3')
+    orderHeading.classList.add('order-heading');
+    orderHeading.textContent =  'ORDER';
+    orderInfo.appendChild(orderHeading);
+
+    const orderSubHeading = document.createElement('h3')
+    orderSubHeading.classList.add('order-sub-heading');
+    orderSubHeading.textContent =  'pick-up & delivery';
+    orderInfo.appendChild(orderSubHeading);
+
+    const orderUnderline = document.createElement('div')
+    orderUnderline.classList.add('info-underline');
+    orderInfo.appendChild(orderUnderline);
+
+    const takeOutTitle = document.createElement('div')
+    takeOutTitle.classList.add('order-take-out');
+    takeOutTitle.textContent =  'CONTACTLESS TAKE-OUT';
+    orderInfo.appendChild(takeOutTitle);
+
+    const takeOutInfo = document.createElement('p')
+    takeOutInfo.classList.add('order-take-out');
+    takeOutInfo.textContent =  'To place an order for pickup, please order via ';
+    orderInfo.appendChild(takeOutInfo);
+
+    const takeOutOrderLink = document.createElement('a')
+    takeOutOrderLink.classList.add('take-out-link');
+    takeOutOrderLink.setAttribute('href', '#')
+    takeOutOrderLink.textContent = 'Square';
+    takeOutInfo.appendChild(takeOutOrderLink);
+
+    const pickUpOrderBtn = document.createElement('button');
+    pickUpOrderBtn.classList.add('pick-up-btn', 'info-btn', 'primary-btn-colors', 'btn-border');
+    pickUpOrderBtn.setAttribute('type', 'button');
+    pickUpOrderBtn.textContent = 'ORDER PICK UP';
+    orderInfo.appendChild(pickUpOrderBtn);
+    
+    const deliveryTitle = document.createElement('div')
+    deliveryTitle.classList.add('order-delivery');
+    deliveryTitle.textContent =  'Delivery';
+    orderInfo.appendChild(deliveryTitle);
+
+    const deliveryInfo = document.createElement('p')
+    deliveryInfo.classList.add('delivery-info');
+    deliveryInfo.textContent =  'To place an order for delivery, please choose from one of our partners below:';
+    orderInfo.appendChild(deliveryInfo);
+
+    const deliveryLinks = document.createElement('div')
+    deliveryLinks.classList.add('take-out-link');
+    orderInfo.appendChild(deliveryLinks);
+
+    // Create links
+    const deliveryServices = [
+        'Postmates',
+        'GrubHub',
+        'Seamless',
+        'UberEats'
+    ];
+    for (let i = 0; i < deliveryServices.length; i++) {
+        const link = document.createElement('a')
+        const punct = document.createElement('span')
+        link.classList.add(`${deliveryServices[i]}-link`);
+        link.setAttribute('href', '#')
+        link.textContent = `${deliveryServices[i]}`;
+
+        if(i === (deliveryServices.length -1)) {
+            punct.textContent += ' & ';
+            deliveryLinks.appendChild(punct);
+        }else if(i > 0 && i < (deliveryServices.length -1)) {
+            punct.textContent += ', ';
+            deliveryLinks.appendChild(punct);
+        }
+        deliveryLinks.appendChild(link);
+    }
+
+    const emptyOrderDiv = document.createElement('div');
+    emptyOrderDiv.classList.add('empty-div');
+
+    orderContainer.appendChild(orderInfo);
+    orderContainer.appendChild(emptyOrderDiv);
+    infoSection.appendChild(orderContainer);
+
+    contentDiv.appendChild(infoSection);
 }

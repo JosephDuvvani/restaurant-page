@@ -52,3 +52,29 @@
     width: max-content;
     padding: .7rem 1.5rem;
 }
+
+.about-container,
+.order-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-underline {
+    border-top: 0.05rem solid #000;
+    width: 20rem;
+}
+
+.open-hours {
+    grid-template-columns: max-content max-content;
+}
+
+.open-hours span:nth-child(2n + 1) {
+    justify-self: end;
+}
+
+.info-btn {
+    padding: .5rem 3.5rem;
+}
+
+.order-take-out {
+    max-width: 25ch;
+}
