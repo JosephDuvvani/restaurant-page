@@ -4,12 +4,19 @@ html {
 * {
     margin: 0;
     padding: 0;
+    font: inherit;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-h1, h2,h3,
-h4, h5, h6 {
-    font-size: 1rem;
-    font-weight: normal;
+
+body {
+    min-width: 57.5rem;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .display-flex {

@@ -3,6 +3,7 @@ import foodImagePath1 from './food-img-1.jpg';
 import foodImagePath2 from './food-img-2.jpg';
 import foodImagePath3 from './food-img-3.jpg';
 import foodImagePath4 from './food-img-4.jpg';
+import infoSectionBgImg from './food-table.jpg';
 import './style.css';
 import './home.css';
 
@@ -75,20 +76,27 @@ export default function () {
     const infoSection = document.createElement('div');
     infoSection.classList.add('info-section');
 
+    //Background Image
+    const bgImage = document.createElement('img');
+    bgImage.src = infoSectionBgImg;
+    bgImage.classList.add('bg-img');
+    bgImage.setAttribute('alt', `Table with food`);
+    infoSection.appendChild(bgImage);
+
     // About Info
     const aboutContainer = document.createElement('div');
     aboutContainer.classList.add('about-container', 'display-grid');
 
     const aboutInfo = document.createElement('div')
-    aboutInfo.classList.add('about-info', 'display-grid', 'grid-horizontal-center');
+    aboutInfo.classList.add('about-info', 'info-card', 'display-grid', 'grid-horizontal-center');
 
     const aboutHeading = document.createElement('h3')
-    aboutHeading.classList.add('about-heading');
+    aboutHeading.classList.add('about-heading', 'info-card-heading');
     aboutHeading.textContent =  'ABOUT';
     aboutInfo.appendChild(aboutHeading);
 
     const aboutSubHeading = document.createElement('h3')
-    aboutSubHeading.classList.add('about-sub-heading');
+    aboutSubHeading.classList.add('about-sub-heading', 'info-card-sub-heading');
     aboutSubHeading.textContent =  'our restaurant';
     aboutInfo.appendChild(aboutSubHeading);
 
@@ -97,12 +105,12 @@ export default function () {
     aboutInfo.appendChild(aboutUnderline);
 
     const hoursOpen = document.createElement('div')
-    hoursOpen.classList.add('hours-open');
+    hoursOpen.classList.add('hours-open-title', 'info-card-body-title');
     hoursOpen.textContent =  'HOURS';
     aboutInfo.appendChild(hoursOpen);
 
     const openHoursDiv = document.createElement('div');
-    openHoursDiv.classList.add('open-hours', 'display-grid');
+    openHoursDiv.classList.add('open-hours', 'info-card-body', 'display-grid');
 
     const days = [
         'Monday - ',
@@ -138,17 +146,17 @@ export default function () {
     aboutInfo.appendChild(openHoursDiv);
 
     const phoneNumbers = document.createElement('div')
-    phoneNumbers.classList.add('phone-numbers');
+    phoneNumbers.classList.add('phone-numbers', 'info-card-body-title');
     phoneNumbers.textContent =  'PHONE';
     aboutInfo.appendChild(phoneNumbers);
 
     const phoneNumberOne = document.createElement('div')
-    phoneNumberOne.classList.add('phone-number');
+    phoneNumberOne.classList.add('phone-number', 'info-card-body');
     phoneNumberOne.textContent =  '212.260.1212';
     aboutInfo.appendChild(phoneNumberOne);
 
     const phoneNumberTwo = document.createElement('div')
-    phoneNumberTwo.classList.add('phone-number');
+    phoneNumberTwo.classList.add('phone-number', 'info-card-body');
     phoneNumberTwo.textContent =  '212.260.7049';
     aboutInfo.appendChild(phoneNumberTwo);
 
@@ -170,15 +178,15 @@ export default function () {
     orderContainer.classList.add('order-container', 'display-grid');
 
     const orderInfo = document.createElement('div')
-    orderInfo.classList.add('order-info', 'display-grid','center-text', 'grid-horizontal-center');
+    orderInfo.classList.add('order-info', 'info-card', 'display-grid','center-text', 'grid-horizontal-center');
 
     const orderHeading = document.createElement('h3')
-    orderHeading.classList.add('order-heading');
+    orderHeading.classList.add('order-heading', 'info-card-heading');
     orderHeading.textContent =  'ORDER';
     orderInfo.appendChild(orderHeading);
 
     const orderSubHeading = document.createElement('h3')
-    orderSubHeading.classList.add('order-sub-heading');
+    orderSubHeading.classList.add('order-sub-heading', 'info-card-sub-heading');
     orderSubHeading.textContent =  'pick-up & delivery';
     orderInfo.appendChild(orderSubHeading);
 
@@ -187,12 +195,12 @@ export default function () {
     orderInfo.appendChild(orderUnderline);
 
     const takeOutTitle = document.createElement('div')
-    takeOutTitle.classList.add('order-take-out');
+    takeOutTitle.classList.add('order-take-out', 'info-card-body-title');
     takeOutTitle.textContent =  'CONTACTLESS TAKE-OUT';
     orderInfo.appendChild(takeOutTitle);
 
     const takeOutInfo = document.createElement('p')
-    takeOutInfo.classList.add('order-take-out');
+    takeOutInfo.classList.add('order-take-out', 'info-card-body');
     takeOutInfo.textContent =  'To place an order for pickup, please order via ';
     orderInfo.appendChild(takeOutInfo);
 
@@ -203,23 +211,23 @@ export default function () {
     takeOutInfo.appendChild(takeOutOrderLink);
 
     const pickUpOrderBtn = document.createElement('button');
-    pickUpOrderBtn.classList.add('pick-up-btn', 'info-btn', 'primary-btn-colors', 'btn-border');
+    pickUpOrderBtn.classList.add('pickup-btn', 'info-btn', 'primary-btn-colors', 'btn-border');
     pickUpOrderBtn.setAttribute('type', 'button');
-    pickUpOrderBtn.textContent = 'ORDER PICK UP';
+    pickUpOrderBtn.textContent = 'ORDER PICKUP';
     orderInfo.appendChild(pickUpOrderBtn);
     
     const deliveryTitle = document.createElement('div')
-    deliveryTitle.classList.add('order-delivery');
-    deliveryTitle.textContent =  'Delivery';
+    deliveryTitle.classList.add('order-delivery', 'info-card-body-title');
+    deliveryTitle.textContent =  'DELIVERY OPTIONS';
     orderInfo.appendChild(deliveryTitle);
 
     const deliveryInfo = document.createElement('p')
-    deliveryInfo.classList.add('delivery-info');
+    deliveryInfo.classList.add('delivery-info', 'info-card-body');
     deliveryInfo.textContent =  'To place an order for delivery, please choose from one of our partners below:';
     orderInfo.appendChild(deliveryInfo);
 
     const deliveryLinks = document.createElement('div')
-    deliveryLinks.classList.add('take-out-link');
+    deliveryLinks.classList.add('take-out-link', 'info-card-body');
     orderInfo.appendChild(deliveryLinks);
 
     // Create links

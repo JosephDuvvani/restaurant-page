@@ -29,7 +29,7 @@
 .mini-food-gallery {
     grid-template-rows: repeat(2, min-content);
     justify-items: center;
-    padding: 5rem 1.5rem 3rem;
+    padding: 6rem 1.5rem 4rem;
     gap: 3rem;
 }
 
@@ -49,13 +49,75 @@
 }
 
 .order-now-btn {
-    width: max-content;
-    padding: .7rem 1.5rem;
+    width: 9.375rem;
+    padding: .8rem 0;
+    font-size: .9rem;
+}
+
+.info-section {
+    position: relative;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.bg-img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .about-container,
 .order-container {
     grid-template-columns: 1fr 1fr;
+}
+
+.info-card {
+    padding: 3.5rem 0;
+}
+
+.info-card-heading {
+    font-size: 3.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 250;
+    letter-spacing: .05em;
+}
+
+.info-card-sub-heading {
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 250;
+    margin: .6rem 0 0.3rem;
+}
+
+.info-card-body-title {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 2rem 0 .5rem;
+    letter-spacing: .05em;
+}
+
+.info-card-body {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+p.info-card-body {
+    font-size: .9rem;
+}
+
+.phone-numbers {
+    margin-top: 4.5rem;
+}  
+
+.about-info {
+    background-color: #fff;
+}
+
+.order-info {
+    background-color: #fff;
 }
 
 .info-underline {
@@ -72,9 +134,16 @@
 }
 
 .info-btn {
-    padding: .5rem 3.5rem;
+    width: 11.25rem;
+    padding: .5rem 0;
+    font-size: .8rem;
+    margin: 2rem 0;
 }
 
 .order-take-out {
     max-width: 25ch;
+}
+
+.pickup-btn {
+    margin: 1.5rem 0 1.5rem;
 }
