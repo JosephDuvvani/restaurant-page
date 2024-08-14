@@ -1,10 +1,23 @@
-html {
-    font-size: 16px;
+:root {
+    --clr-accent-400: hsl(34, 21%, 56%);
+    --clr-accent-300: hsl(34, 21%, 76%);
+    --clr-accent-200: hsl(34, 21%, 86%);
+    --clr-accent-100: hsl(34, 21%, 97%);
+
+    --clr-primary-800: hsl(338, 58%, 8%);
+    --clr-primary-400: hsl(338, 38%, 38%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(0, 0%, 70%);
+    --clr-neutral-400: hsl(0, 0%, 50%);
+    --clr-neutral-900: hsl(0, 0%, 12%);
 }
+
 * {
     margin: 0;
     padding: 0;
     font: inherit;
+    color: inherit;
 }
 
 *,
@@ -37,13 +50,106 @@ body {
 .center-text {
     text-align: center;
 }
+.clickable {
+    cursor: pointer;
+}
+
+header{
+    background-color: var(--clr-accent-200);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.primary-navigation {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-template-rows: 3.5rem;
+    justify-content: center;
+    color: var(--clr-neutral-400);
+}
+
+.primary-navigation button {
+    font-size: .8rem;
+    font-weight: 500;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    transition: color 1000ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+.primary-navigation button:hover {
+    background-color: var(--clr-accent-300);
+    color: var(--clr-primary-800);
+}
 
 .primary-btn-colors {
-    color: #fff;
-    background-color: #09572a;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-400);
+    transition: color 400ms ease-in-out, background-color 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 
 .btn-border {
     border-style: none;
     border-radius: .3rem;
+}
+
+
+.primary-btn-colors:hover {
+    cursor: pointer;
+    background-color: var(--clr-accent-200);
+    color: var(--clr-neutral-600);
+    box-shadow: 0 .5rem .7rem -.5rem var(--clr-neutral-900);
+}
+
+footer {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-300);
+    grid-auto-rows: min-content;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.restaurant-name {
+    grid-auto-flow: column;
+    grid-template-rows: 2rem;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.restaurant-name span:first-child {
+    align-self: start;
+    position: relative;
+    top: -0.3rem;
+}
+
+.restaurant-name span:last-child {
+    align-self: end;
+    position: relative;
+    bottom: -0.3rem;
+}
+
+.restaurant-name .line {
+    border-left: 0.12rem solid var(--clr-neutral-300);
+}
+
+footer .social-media {
+    gap: 1rem;
+}
+
+footer .social-media svg {
+    width: 1.25rem;
+    height: min-content;
+    fill: var(--clr-neutral-100);
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: .7rem;
 }

@@ -1,3 +1,19 @@
+:root {
+    --clr-accent-400: hsl(34, 21%, 56%);
+    --clr-accent-300: hsl(34, 21%, 76%);
+    --clr-accent-200: hsl(34, 21%, 86%);
+    --clr-accent-100: hsl(34, 21%, 97%);
+
+    --clr-primary-800: hsl(338, 58%, 8%);
+    --clr-primary-400: hsl(338, 38%, 38%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(0, 0%, 70%);
+    --clr-neutral-400: hsl(0, 0%, 50%);
+    --clr-neutral-600: hsl(0, 0%, 45%);
+    --clr-neutral-900: hsl(0, 0%, 12%);
+}
+
 #main-title {
     height: 47rem;
     overflow-clip-margin: content-box; 
@@ -13,13 +29,15 @@
 #main-title .logo-container {
     position: absolute;
     top: 30%;
-    right: 20%;
-    width: 18.75rem;
+    right: 15%;
+    width: 25rem;
 }
 
 .logo-container .logo-text {
-    color: #fff;
+    color: var(--clr-neutral-100);
     font-size: 5rem;
+    font-weight: 700;
+    font-style: oblique;
 }
 
 .logo-container .locale-text {
@@ -31,6 +49,7 @@
     justify-items: center;
     padding: 6rem 1.5rem 4rem;
     gap: 3rem;
+    background-color: var(--clr-accent-100);
 }
 
 .food-image {
@@ -61,6 +80,7 @@
 }
 
 .bg-img {
+    min-width: 115rem;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -80,6 +100,7 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 250;
     letter-spacing: .05em;
+    color: var(--clr-primary-800);
 }
 
 .info-card-sub-heading {
@@ -87,6 +108,7 @@
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 250;
     margin: .6rem 0 0.3rem;
+    color: var(--clr-primary-400);
 }
 
 .info-card-body-title {
@@ -95,6 +117,7 @@
     font-weight: 500;
     margin: 2rem 0 .5rem;
     letter-spacing: .05em;
+    color: var(--clr-primary-800);
 }
 
 .info-card-body {
@@ -102,6 +125,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.7;
+    color: var(--clr-neutral-600);
 }
 
 p.info-card-body {
@@ -112,16 +136,13 @@ p.info-card-body {
     margin-top: 4.5rem;
 }  
 
-.about-info {
-    background-color: #fff;
-}
-
+.about-info,
 .order-info {
-    background-color: #fff;
+    background-color: var(--clr-neutral-100);
 }
 
 .info-underline {
-    border-top: 0.05rem solid #000;
+    border-top: 0.05rem solid var(--clr-primary-800);
     width: 20rem;
 }
 
@@ -146,4 +167,12 @@ p.info-card-body {
 
 .pickup-btn {
     margin: 1.5rem 0 1.5rem;
+}
+
+.delivery-info {
+    max-width: 42ch;
+}
+
+.order-info div:last-child {
+    padding-top: 0.5rem;
 }
