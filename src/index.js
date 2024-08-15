@@ -1,3 +1,5 @@
 import loadHomepage from './home';
+import loadMenu from './menu';
 
-loadHomepage();
+// loadHomepage();
+loadMenu();
