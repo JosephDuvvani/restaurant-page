@@ -9,7 +9,8 @@ import './home.css';
 
 export default function () {
     const contentDiv = document.querySelector('#content');
-
+    contentDiv.textContent = '';
+    
 // Homepage main image and logo
     const mainTitle = document.createElement('div');
     mainTitle.setAttribute('id', 'main-title');

@@ -6,6 +6,7 @@ import foodTable from './set-table.jpg'
 
 export default function () {
     const contentDiv = document.querySelector('#content');
+    contentDiv.textContent = '';
 
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('main-image-display', 'display-grid');
