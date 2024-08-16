@@ -54,7 +54,7 @@ export default function () {
     displayMenuList('Starters', startersList, menuContainer);
 
     const imageWrapper1 = document.createElement('div');
-    imageWrapper1.classList.add('menu-image-wrapper-1', 'image-wrapper');
+    imageWrapper1.classList.add('menu-image-wrapper-1', 'image-wrapper', 'menu-image-wrapper');
 
     const menuImage1 = document.createElement('img');
     menuImage1.src = chefKitchen;
@@ -65,7 +65,7 @@ export default function () {
     menuContainer.appendChild(imageWrapper1);
 
     const imageWrapper2 = document.createElement('div');
-    imageWrapper2.classList.add('menu-image-wrapper-2', 'image-wrapper');
+    imageWrapper2.classList.add('menu-image-wrapper-2', 'image-wrapper', 'menu-image-wrapper');
 
     const menuImage2 = document.createElement('img');
     menuImage2.src = foodTable;

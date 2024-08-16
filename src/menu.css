@@ -99,7 +99,7 @@
     color: var(--clr-neutral-400);
 }
 
-.image-wrapper {
+.menu-image-wrapper {
     align-self: center;
     width: 20rem;
     box-shadow: .5rem .5rem .3rem var(--clr-primary-800);

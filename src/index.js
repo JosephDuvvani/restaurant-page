@@ -1,7 +1,10 @@
 import loadHomepage from './home';
 import loadMenu from './menu';
+import loadReservation from './reservation';
+import loadTakeAway from './take-away';
 
-loadHomepage();
+// loadHomepage();
+loadTakeAway();
 
 
 (function navigationEvents() {
@@ -20,11 +23,10 @@ loadHomepage();
                     loadMenu();
                     break;
                 case 'reservation':
-                    console.log('reservation');
-                    
+                    loadReservation();                 
                     break;
                 case 'take-away':
-                    console.log('take away');              
+                    loadTakeAway();              
                     break;
                 case 'press':
                     console.log('press');                 
