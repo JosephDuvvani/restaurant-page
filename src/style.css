@@ -73,6 +73,8 @@ img {
     flex: auto;
     overflow-clip-margin: content-box;
     overflow: clip;
+    background-color: var(--clr-accent-200);
+    isolation: isolate;
 }
 
 .display-flex {
@@ -132,11 +134,6 @@ header{
     color: var(--clr-neutral-100);
     background-color: var(--clr-accent-400);
     transition: color 400ms ease-in-out, background-color 500ms ease-in-out, box-shadow 500ms ease-in-out;
-}
-
-#content {
-    background-color: var(--clr-accent-200);
-    isolation: isolate;
 }
 
 .btn-border {
