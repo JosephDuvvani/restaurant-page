@@ -2,10 +2,11 @@ import loadHomepage from './home';
 import loadMenu from './menu';
 import loadReservation from './reservation';
 import loadTakeAway from './take-away';
+import loadContact from './contact';
+import { displayContactInfo } from './contact';
 
-// loadHomepage();
-loadTakeAway();
-
+loadHomepage();
+loadContact();
 
 (function navigationEvents() {
     const content = document.querySelector('#content');
@@ -32,7 +33,7 @@ loadTakeAway();
                     console.log('press');                 
                     break;
                 case 'contact-us':
-                    console.log('contact us');             
+                    displayContactInfo();       
                     break;     
             }
         });

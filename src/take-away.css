@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --clr-accent-400: hsl(34, 21%, 56%);
     --clr-accent-300: hsl(34, 21%, 76%);
     --clr-accent-200: hsl(34, 21%, 86%);
@@ -36,7 +36,7 @@
     --fw-regular: 400;
     --fw-semi-bold: 500;
     --fw-bold: 700;
-}
+} */
 
 .main-container {
     gap: 5rem;
@@ -46,6 +46,7 @@
     justify-self: center;
     font-size: var(--fs-500);
     font-family: var(--ff-secondary);
+    margin-top: 5rem;
 }
 
 .order-items-container {

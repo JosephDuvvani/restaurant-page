@@ -6,12 +6,16 @@
 
     --clr-primary-800: hsl(338, 58%, 8%);
     --clr-primary-400: hsl(338, 38%, 38%);
+    --clr-primary-300: hsl(338, 29%, 88%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-neutral-300: hsl(0, 0%, 70%);
     --clr-neutral-400: hsl(0, 0%, 35%);
     --clr-neutral-600: hsl(0, 0%, 20%);
     --clr-neutral-900: hsl(0, 0%, 12%);
+
+    --clr-secondary-500: hsl(182, 25%, 50%);
+    --clr-secondary-100: hsl(182, 25%, 90%);
 
     --ff-neutral: "Open Sans", sans-serif;
     --ff-accent: "Josefin Sans", sans-serif;
