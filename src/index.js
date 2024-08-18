@@ -30,7 +30,7 @@ loadContact();
                     loadTakeAway();              
                     break;
                 case 'press':
-                    console.log('press');                 
+                    console.log('No Press');                 
                     break;
                 case 'contact-us':
                     displayContactInfo();       

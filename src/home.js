@@ -4,6 +4,8 @@ import foodImagePath2 from './food-img-2.jpg';
 import foodImagePath3 from './food-img-3.jpg';
 import foodImagePath4 from './food-img-4.jpg';
 import infoSectionBgImg from './food-table.jpg';
+import loadTakeAway from './take-away';
+import { displayContactInfo } from './contact';
 import './style.css';
 import './home.css';
 
@@ -73,6 +75,10 @@ export default function () {
     foodGallery.appendChild(orderNowBtn);
     contentDiv.appendChild(foodGallery);
 
+    orderNowBtn.addEventListener('click', () => {
+        loadTakeAway();
+    });
+
 // Info Section
     const infoSection = document.createElement('div');
     infoSection.classList.add('info-section');
@@ -124,13 +130,13 @@ export default function () {
     ];
 
     const hours = [
-        '12pm-9pm',
-        '12pm-9pm',
-        '12pm-10pm',
-        '12pm-10pm',
-        '12pm-10pm',
-        '12pm-10pm',
-        '12pm-10pm'
+        '11pm-9pm',
+        '11pm-9pm',
+        '11pm-10pm',
+        '11pm-10pm',
+        '11pm-10pm',
+        '11pm-10pm',
+        '11pm-10pm'
     ];
 
     for(let i = 0; i < days.length; i++) {
@@ -153,12 +159,12 @@ export default function () {
 
     const phoneNumberOne = document.createElement('div')
     phoneNumberOne.classList.add('phone-number', 'info-card-body');
-    phoneNumberOne.textContent =  '212.260.1212';
+    phoneNumberOne.textContent =  '313.626.301';
     aboutInfo.appendChild(phoneNumberOne);
 
     const phoneNumberTwo = document.createElement('div')
     phoneNumberTwo.classList.add('phone-number', 'info-card-body');
-    phoneNumberTwo.textContent =  '212.260.7049';
+    phoneNumberTwo.textContent =  '313.426.204';
     aboutInfo.appendChild(phoneNumberTwo);
 
     const aboutBtn = document.createElement('button');
@@ -166,6 +172,10 @@ export default function () {
     aboutBtn.setAttribute('type', 'button');
     aboutBtn.textContent = 'ABOUT US';
     aboutInfo.appendChild(aboutBtn);
+
+    aboutBtn.addEventListener('click', () => {
+        displayContactInfo();
+    })
 
     const emptyAboutDiv = document.createElement('div');
     emptyAboutDiv.classList.add('empty-div');
@@ -216,6 +226,10 @@ export default function () {
     pickUpOrderBtn.setAttribute('type', 'button');
     pickUpOrderBtn.textContent = 'ORDER PICKUP';
     orderInfo.appendChild(pickUpOrderBtn);
+
+    pickUpOrderBtn.addEventListener('click', () => {
+        loadTakeAway();
+    })
     
     const deliveryTitle = document.createElement('div')
     deliveryTitle.classList.add('order-delivery', 'info-card-body-title');

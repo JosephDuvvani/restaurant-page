@@ -1,38 +1,3 @@
-/* :root {
-    --clr-accent-400: hsl(34, 21%, 56%);
-    --clr-accent-300: hsl(34, 21%, 76%);
-    --clr-accent-200: hsl(34, 21%, 86%);
-    --clr-accent-100: hsl(34, 21%, 97%);
-
-    --clr-primary-800: hsl(338, 58%, 8%);
-    --clr-primary-400: hsl(338, 38%, 38%);
-
-    --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-neutral-300: hsl(0, 0%, 70%);
-    --clr-neutral-400: hsl(0, 0%, 50%);
-    --clr-neutral-600: hsl(0, 0%, 35%);
-    --clr-neutral-900: hsl(0, 0%, 12%);
-
-    --ff-neutral: "Open Sans", sans-serif;
-    --ff-accent: "Josefin Sans", sans-serif;
-    --ff-primary: "Raleway", sans-serif;
-
-    --ff-body: var(--ff-neutral);
-    --ff-heading: var(--ff-primary);
-    --ff-secondary: var(--ff-accent);
-
-    --fs-100: .75rem;
-    --fs-200: .8125rem;
-    --fs-300: .875rem;
-    --fs-400: 1rem;
-    --fs-500: 1.875rem;
-    --fs-600: 3rem;
-
-    --fw-regular: 400;
-    --fw-semi-bold: 500;
-    --fw-bold: 700;
-} */
-
 #main-title {
     height: 47rem;
     overflow-clip-margin: content-box; 
