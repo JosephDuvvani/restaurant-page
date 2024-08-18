@@ -3,8 +3,29 @@ import './style.css';
 import image from './shrimp.jpg';
 import dessertImage from './dessert.jpg';
 import startersImage from './food-img-3.jpg';
+import friedShrimpImage from './fried-shrimp.jpg';
+import dumplingsImage from './dumplings.jpg';
+import rotiCanaiImage from './roti-canai.jpg';
+import greenRollsImage from './collard-green-rolls.jpg';
+import satayImage from './satay.jpg';
+import creoleImage from './creole-chicken.jpg';
+import pepperSteakImage from './pepper-steak.jpg';
+import steakPotatoesImage from './steak-potatoes.jpg';
+import citrusBeefImage from './citrus-beef.jpg';
+import salmonTeriyakiImage from './salmon-teriyaki.jpg';
+import szechuanBeefImage from './szechuan-beef.jpg';
+import porkRibsImage from './ribs.jpg';
+import eggplantParmesanImage from './eggplant-parmesan.jpg';
+import tofuImage from './tofu.jpg';
+import rigatoniImage from './rigatoni.jpg';
+import chocMousseImage from './chocolate-mousse.jpg';
+import chocCremeuxImage from './chocolate-cremeux.jpg';
+import caramelMousseImage from './caramel-mousse.jpg';
+import strawberryPeaImage from './strawberry-pea.jpg';
+import hazelnutBavaroisImage from './hazelnut-bavarois.jpg';
 
-function displayCard(item, imagePath, parent, before = 0) {
+
+function displayCard(item, parent, before = 0) {
     const card = document.createElement('div');
     card.classList.add('order-display-card', 'clickable', 'display-grid');
 
@@ -14,8 +35,9 @@ function displayCard(item, imagePath, parent, before = 0) {
     card.appendChild(imageWrapper);
 
     const orderItemImage = document.createElement('img');
-    orderItemImage.src = imagePath;
+    orderItemImage.src = item.image;
     orderItemImage.setAttribute('alt', `${item.name}`);
+    orderItemImage.setAttribute('loading', 'lazy');
     orderItemImage.classList.add('order-item-image');
 
     imageWrapper.appendChild(orderItemImage);
@@ -130,120 +152,140 @@ export default function () {
         {
             name: 'Cajun fried shrimp',
             description: 'Deep-fried soy shrimp | Paprika | Vegan cocktail sauce.',
-            price: '$15.00'
+            price: '$15.00',
+            image: friedShrimpImage
         },
         {
             name: 'Dragonfly dumplings',
             description: 'Fried rice dumplings | Mixed greens | Ginger dressing',
-            price: '$15.00'
+            price: '$15.00',
+            image: dumplingsImage
         },
         {
             name: 'Roti canai',
             description: 'Indian crepe | Soy chicken | Curry sauce.',
-            price: '$15.00'
+            price: '$15.00',
+            image: rotiCanaiImage
         },
         {
             name: 'Collard green rolls',
             description: 'Fried rolls | Sautéed greens | Ham | Sweet chili sauce',
-            price: '$15.00'
+            price: '$15.00',
+            image: greenRollsImage
         },
         {
             name: 'Chicken satay',
             description: 'Skewered chicken | Coconut seasoning | Peanut chili sauce',
-            price: '$15.00'
+            price: '$15.00',
+            image: satayImage
         },
     ];
 
     for(let food of startersList) {
-        displayCard(food, startersImage, orderItemsContainer, mainCourseTitle);
+        displayCard(food, orderItemsContainer, mainCourseTitle);
     }
 
     const mainCourseList = [
         {
             name: 'Creole soul chicken',
             description: 'Chicken | Rosemary seasoning | Potatoes | gravy',
-            price: '$24.99'
+            price: '$24.99',
+            image: creoleImage
         },
         {
             name: 'Sizzling pepper steak platter',
             description: 'Steak | Mushrooms | peppers | Onion rings | Rice',
-            price: '$24.99'
+            price: '$24.99',
+            image: pepperSteakImage
         },
         {
-            name: 'Steak and potatoes . ',
+            name: 'Steak and potatoes',
             description: 'Vegan Steak | Fingerling potatoes | French beans | almonds',
-            price: '$24.99'
+            price: '$24.99',
+            image: steakPotatoesImage
         },
         {
-            name: 'Citrus beef ',
+            name: 'Citrus beef',
             description: 'Citrus beef | Zucchini | Squash | Rice',
-            price: '$24.99'
+            price: '$24.99',
+            image: citrusBeefImage
         },
         {
-            name: 'Salmon teriyaki ',
+            name: 'Salmon teriyaki',
             description: 'Salmon | Teriyaki dressing | Vegetables | Rice',
-            price: '$24.99'
+            price: '$24.99',
+            image: salmonTeriyakiImage
         },
         {
             name: 'Szechuan beef',
             description: 'Beef | Chinese chilies | Peppers | Rice',
-            price: '$24.99'
+            price: '$24.99',
+            image: szechuanBeefImage
         },
         {
             name: 'Barbecue ribs',
             description: 'Pork ribs | Snap peas | Potatoes | Gravy',
-            price: '$24.99'
+            price: '$24.99',
+            image: porkRibsImage
         },
         {
-            name: 'Eggplant parmesan ',
+            name: 'Eggplant parmesan',
             description: 'Breaded eggplant | Marinara sauce | Garlic toast | Cheese',
-            price: '$24.99'
+            price: '$24.99',
+            image: eggplantParmesanImage
         },
         {
             name: 'Red curry tofu',
             description: 'Tofu | Eggplant | Green beans | Thai curry sauce | Rice',
-            price: '$24.99'
+            price: '$24.99',
+            image: tofuImage
         },
         {
             name: 'Rigatoni bolognese',
             description: 'Rigatoni pasta | Tomatoe sauce | minced beef | herbs',
-            price: '$24.99'
+            price: '$24.99',
+            image: rigatoniImage
         },
     ];
 
     for(let food of mainCourseList) {
-        displayCard(food, image, orderItemsContainer, dessertsTitle);
+        displayCard(food, orderItemsContainer, dessertsTitle);
     }
 
     const dessertsList = [
         {
             name: 'Chocolate mousse',
             description: '',
-            price: '$9.95'
+            price: '$9.95',
+            image: chocMousseImage
         },
         {
             name: 'Chocolate cremeux | Ice cream | Coffee and caramel',
             description: '',
-            price: '$9.95'
+            price: '$9.95',
+            image: chocCremeuxImage
         },
         {
             name: 'Chocolate aero | Chocolate mousse | Salted caramel',
             description: '',
-            price: '$9.95'
+            price: '$9.95',
+            image: caramelMousseImage
         },
         {
             name: 'Strawberry and pea',
             description: '',
-            price: '$9.95'
+            price: '$9.95',
+            image: strawberryPeaImage
         },
         {
             name: 'Hazelnut bavarois | Banana | Yoghurt sorbet',
             description: '',
-            price: '$9.95'
+            price: '$9.95',
+            image: hazelnutBavaroisImage
         },
     ];
 
     for(let food of dessertsList) {
-        displayCard(food, dessertImage, orderItemsContainer);
+        displayCard(food, orderItemsContainer);
     }
 }
